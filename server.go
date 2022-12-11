@@ -34,6 +34,7 @@ func main() {
 
 	// migrate all schema
 	db.AutoMigrate(&models.User{})
+	db.AutoMigrate(&models.Post{})
 
 	e := echo.New()
 	e.GET("/", func(c echo.Context) error {
