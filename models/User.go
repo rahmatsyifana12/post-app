@@ -11,4 +11,5 @@ type User struct {
 	CreatedAt 	time.Time `gorm:"not null"`
   	UpdatedAt 	time.Time `gorm:"not null"`
 	Posts		[]Post
+	Comment		[]Comment
 }
