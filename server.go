@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 	"os"
-	"post-app/models"
+	"post-app/entities"
 
 	"github.com/joho/godotenv"
 	"github.com/labstack/echo/v4"
@@ -33,9 +33,9 @@ func main() {
 	}
 
 	// migrate all schema
-	db.AutoMigrate(&models.User{})
-	db.AutoMigrate(&models.Post{})
-	db.AutoMigrate(&models.Comment{})
+	db.AutoMigrate(&entities.User{})
+	db.AutoMigrate(&entities.Post{})
+	db.AutoMigrate(&entities.Comment{})
 
 	e := echo.New()
 	e.GET("/", func(c echo.Context) error {
