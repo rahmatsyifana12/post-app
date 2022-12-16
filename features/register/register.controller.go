@@ -17,6 +17,5 @@ func (rc* RegisterController) CreateUser(c echo.Context) (err error) {
 
 	rs := RegisterService{}
 	rs.CreateUser(u)
-
 	return err
 }
